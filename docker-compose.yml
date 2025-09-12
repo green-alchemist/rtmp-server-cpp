@@ -1,0 +1,16 @@
+# Use a modern version of the Docker Compose file format
+version: '3.8'
+
+# Define the services (containers) for our application
+services:
+  # The name of our service
+  rtmp-server:
+    # Tell Compose to build the image from the Dockerfile in the current directory
+    build: .
+    # Give the running container a friendly name
+    container_name: cpp_rtmp_server
+    # Map port 1935 on the host to port 1935 in the container
+    ports:
+      - "1935:1935"
+    # Automatically restart the container unless it was manually stopped
+    restart: unless-stopped

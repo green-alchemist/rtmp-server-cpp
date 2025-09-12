@@ -1,0 +1,10 @@
+# Ignore the local build directory
+build/
+
+# Ignore Docker files
+Dockerfile
+.dockerignore
+
+# Ignore Git files
+.git/
+.gitignore
